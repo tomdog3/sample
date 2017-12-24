@@ -16,11 +16,16 @@ namespace User;
 class Controller_Register extends \Controller 
 {
     function action_index() {
-        
         return \Response::forge(\View::forge('register'));
     }
     
     function action_submit() {
+        $form = \Input::post();
+        $user = \Model_User::forge();
+        $user->set($form);
+        $user->save();
         
+        $args = array('title'=>'申込完了');
+        return \Response::forge(\View::forge('success', $args));
     }
 }
