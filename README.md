@@ -17,6 +17,9 @@
 - ファイルアップロード
 - メール受信
 
+# システム構成図
+![システム構成図](https://github.com/tomdog3/sample/blob/master/tomdoc3.png)
+
 # 開発環境
 - MacOS Sierra 10.12.6
 - NetBeans 8.2
