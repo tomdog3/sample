@@ -17,12 +17,18 @@
 - ファイルアップロード
 - メール受信
 
+# システム構成図
+![システム構成図](https://github.com/tomdog3/sample/blob/master/tomdoc3.png)
+
 # 開発環境
 - MacOS Sierra 10.12.6
 - NetBeans 8.2
 - PHP 5.4
 - FuelPHP 1.8
 - MAMP 4.2.1
+- Elasticsearch
+- Supervisord
+- Redis
 
 # モジュールパス
 APPPATH=fuel/app/
@@ -35,10 +41,15 @@ APPPATH/modules/user
 
 ---
 
-# 2017/12/19(火)時点の考え
+# 備忘録
+## 2017/12/19(火)時点の考え
 - ログインなど機能の充実より、メインとなる画面を作成後、画面のUIを少し充実させる
 - fuelphpフレームワークの簡単な機能をたくさん使うこと
 - DBの最適化は後回し、登録、抽出ができれば一旦OK
 - 導入や機能利用の学習コストに時間掛かりそうなため、とりあえず進めること。
 
+## 2017/12/29(金)
+- システム構成図、開発環境に開発ツール名を追記（versionは後程追記）
+
 ---
+
