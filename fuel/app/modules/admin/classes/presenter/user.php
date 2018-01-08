@@ -5,24 +5,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 namespace Admin;
+
 /**
  * Description of user
  *
  * @author tomdog
  */
-class Presenter_User extends \Presenter 
-{
+class Presenter_User extends \Presenter {
+
     private $genders = array(0 => '未選択', 1 => '男性', 2 => '女性');
-    //put your code here
+
     public function view() {
-        $users = \Model_User::find_all();
+        $users = \Model_User::find('all');
         array_walk($users, array($this, "_presentational"));
-        $this->title = 'プレゼンターのテスト';
         $this->users = $users;
     }
-    
+
     private function _presentational(&$data) {
         $data->gender_string = $this->genders[$data->gender];
     }
+
 }

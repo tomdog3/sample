@@ -13,11 +13,13 @@ and open the template in the editor.
     </head>
     <body>
         <table>
-            <tr>
-                <td><?php echo $name; ?></td>
-                <td><?php echo $email; ?></td>
-                <td><?php echo $gender; ?></td>
-            </tr>
+            <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?php echo $user->name ?></td>
+                    <td><?php echo $user->email ?></td>
+                    <td><?php echo $user->gender_string ?></td>
+                </tr>
+            <?php endforeach; ?>
         </table>
     </body>
 </html>
