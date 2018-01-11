@@ -53,7 +53,6 @@ APPPATH/modules/user
 
 ## 2017/01/11(木)
 - ユーザ一覧画面修正（Presenter利用）
-
 - Supervisord導入
 - Elasticserch導入
 - Redis導入、session管理にredisを利用
