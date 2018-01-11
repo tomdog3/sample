@@ -28,7 +28,7 @@
 - MAMP 4.2.1
 - Elasticsearch
 - Supervisord
-- Redis
+- Redis 4.0.6
 
 # モジュールパス
 APPPATH=fuel/app/
@@ -51,5 +51,12 @@ APPPATH/modules/user
 ## 2017/12/29(金)
 - システム構成図、開発環境に開発ツール名を追記（versionは後程追記）
 
----
+## 2017/01/08(月)
+- ユーザ一覧画面修正（Presenter一部利用）
 
+## 2017/01/12(金)
+- supervisord導入
+- redis導入、session管理にredisを利用
+- ログイン画面実装
+
+---
