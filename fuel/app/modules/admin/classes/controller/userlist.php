@@ -16,8 +16,6 @@ namespace Admin;
 class Controller_Userlist extends \Controller {
 
     function action_index() {
-//        $users = \Model_User::find('all');
-//        $this->users = $users;
         return \Response::forge(\Presenter::forge('user'));
     }
 

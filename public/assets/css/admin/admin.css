@@ -1,7 +1,15 @@
+#main {
+    margin-top: 8%;
+}
+
 table,td {
     border:solid 1px black;
 }
 
 table {
     border-collapse:collapse;
+}
+
+#logout {
+    color: blue;
 }

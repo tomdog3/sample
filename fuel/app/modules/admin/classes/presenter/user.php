@@ -21,6 +21,8 @@ class Presenter_User extends \Presenter {
         $users = \Model_User::find('all');
         array_walk($users, array($this, "_presentational"));
         $this->users = $users;
+        $this->loginid = \Session::get('username');
+        $this->time = \Session::get('lasttime');
     }
 
     private function _presentational(&$data) {
