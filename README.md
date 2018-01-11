@@ -55,9 +55,9 @@ APPPATH/modules/user
 - ユーザ一覧画面修正（Presenter利用）
 
 ## 2017/01/11(木)
-- supervisord導入
+- Supervisord導入
 - Elasticserch導入
-- redis導入、session管理にredisを利用
+- Redis導入、session管理にredisを利用
 - ログイン画面実装（Authパッケージ->Simpleauth利用）
 
 ---
