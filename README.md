@@ -26,8 +26,8 @@
 - PHP 5.4
 - FuelPHP 1.8
 - MAMP 4.2.1
-- Elasticsearch
-- Supervisord
+- Elasticsearch 6.1.1
+- Supervisord 3.3.3
 - Redis 4.0.6
 
 # モジュールパス
