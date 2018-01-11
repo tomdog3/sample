@@ -52,11 +52,11 @@ APPPATH/modules/user
 - システム構成図、開発環境に開発ツール名を追記（versionは後程追記）
 
 ## 2017/01/08(月)
-- ユーザ一覧画面修正（Presenter一部利用）
+- ユーザ一覧画面修正（Presenter利用）
 
 ## 2017/01/12(金)
 - supervisord導入
 - redis導入、session管理にredisを利用
-- ログイン画面実装
+- ログイン画面実装（Authパッケージ->Simpleauthの利用）
 
 ---
