@@ -51,10 +51,9 @@ APPPATH/modules/user
 ## 2017/12/29(金)
 - システム構成図、開発環境に開発ツール名を追記（versionは後程追記）
 
-## 2017/01/08(月)
+## 2017/01/11(木)
 - ユーザ一覧画面修正（Presenter利用）
 
-## 2017/01/11(木)
 - Supervisord導入
 - Elasticserch導入
 - Redis導入、session管理にredisを利用
