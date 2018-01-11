@@ -57,6 +57,6 @@ APPPATH/modules/user
 ## 2017/01/12(金)
 - supervisord導入
 - redis導入、session管理にredisを利用
-- ログイン画面実装（Authパッケージ->Simpleauthの利用）
+- ログイン画面実装（Authパッケージ->Simpleauth利用）
 
 ---
