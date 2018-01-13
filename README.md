@@ -20,7 +20,8 @@
 https://github.com/tomdog3/sample/wiki
 
 # システム構成図
-![システム構成図](https://github.com/tomdog3/sample/blob/master/tomdoc3.png)
+![システム構成図](https://user-images.githubusercontent.com/34684487/34906148-5d44ca98-f8aa-11e7-805a-6bc5e0b9cfd9.png)
+
 
 # 開発環境/ツール
 - MacOS Sierra 10.12.6
