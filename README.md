@@ -64,5 +64,6 @@ APPPATH/modules/user
 
 ## 2017/01/13(土)
 - Wikiを作成->キャプチャを添付
+- システム構成図にKibanaを追記
 
 ---
