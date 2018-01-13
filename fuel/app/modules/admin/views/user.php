@@ -29,6 +29,7 @@ and open the template in the editor.
         </header>
         <div class="container" id="main">
             <div class="row">
+                <h1>ユーザ一覧</h1>
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>

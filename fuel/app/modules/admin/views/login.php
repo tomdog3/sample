@@ -14,19 +14,19 @@ and open the template in the editor.
         <div class="container">
             <div class="row">
                 <h1>ログイン</h1>
-                <?php if (isset($error)): ?>
-                    <?php echo $error ?>
-                <?php endif ?>
+                <?php echo Form::open('admin/login/login'); ?>
+                <table class="table">
+                    <tr>
+                        <td><?php echo Form::label('ログインID：', 'loginid'); ?></td>
+                        <td><?php echo Form::input('loginid', '', array('size' => 30)); ?></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo Form::label('パスワード：', 'password'); ?></td>
+                        <td><?php echo Form::input('password', '', array('type' => 'password', 'size' => 30)); ?></td>
+                    </tr>
+
+                </table>
                 <?php
-                echo Form::open('admin/login/login');
-                echo Form::label('ログインID：', 'login_id');
-                echo Form::input('loginid', '', array('size' => 30));
-                echo '<br/>';
-
-                echo Form::label('パスワード：', 'password');
-                echo Form::input('password', '', array('size' => 30));
-                echo '<br/>';
-
                 echo Form::submit('submit', 'ログイン', array('class' => 'btn btn-primary'));
                 echo Form::close();
                 ?>
