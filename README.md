@@ -13,14 +13,16 @@
 - 顧客情報編集・削除
 
 ### ●ユーザ
-- ユーザ情報登録
+- 会員情報登録
 - ファイルアップロード
-- メール受信
+
+### 機能画面のキャプチャはWiki参照
+https://github.com/tomdog3/sample/wiki
 
 # システム構成図
 ![システム構成図](https://github.com/tomdog3/sample/blob/master/tomdoc3.png)
 
-# 開発環境
+# 開発環境/ツール
 - MacOS Sierra 10.12.6
 - NetBeans 8.2
 - PHP 5.4
@@ -29,6 +31,7 @@
 - Elasticsearch 6.1.1
 - Supervisord 3.3.3
 - Redis 4.0.6
+- Kibana 6.1.1
 
 # モジュールパス
 APPPATH=fuel/app/
