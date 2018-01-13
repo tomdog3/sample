@@ -57,7 +57,7 @@ APPPATH/modules/user
 
 ## 2017/01/12(金)
 - ユーザ一覧画面修正（Presenter利用）
-- Elasticserch導入、Kibanaと連携
+- Elasticserch導入(アプリログの取り込みは未実現)、Kibanaと連携
 - Redis導入、session管理にredisを利用
 - Supervisord導入、ElasticsearchやRedisの起動設定
 - ログイン画面実装（Authパッケージ->Simpleauth利用）
