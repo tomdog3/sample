@@ -61,4 +61,7 @@ APPPATH/modules/user
 - Supervisord導入、ElasticsearchやRedisの起動設定
 - ログイン画面実装（Authパッケージ->Simpleauth利用）
 
+## 2017/01/13(土)
+- Wikiを作成->キャプチャを添付
+
 ---
