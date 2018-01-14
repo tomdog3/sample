@@ -20,7 +20,8 @@
 https://github.com/tomdog3/sample/wiki
 
 # システム構成図
-![システム構成図](https://github.com/tomdog3/sample/blob/master/tomdoc3.png)
+![システム構成図](https://user-images.githubusercontent.com/34684487/34906148-5d44ca98-f8aa-11e7-805a-6bc5e0b9cfd9.png)
+
 
 # 開発環境/ツール
 - MacOS Sierra 10.12.6
@@ -52,16 +53,17 @@ APPPATH/modules/user
 - 導入や機能利用の学習コストに時間掛かりそうなため、とりあえず進めること。
 
 ## 2017/12/29(金)
-- システム構成図、開発環境に開発ツール名を追記（versionは後程追記）
+- システム構成図、開発環境に開発ツールを追記
 
 ## 2017/01/12(金)
 - ユーザ一覧画面修正（Presenter利用）
-- Elasticserch導入、Kibanaと連携
+- Elasticserch導入(アプリログの取り込みは未実現)、Kibanaと連携
 - Redis導入、session管理にredisを利用
 - Supervisord導入、ElasticsearchやRedisの起動設定
 - ログイン画面実装（Authパッケージ->Simpleauth利用）
 
 ## 2017/01/13(土)
 - Wikiを作成->キャプチャを添付
+- システム構成図にKibanaを追記
 
 ---
