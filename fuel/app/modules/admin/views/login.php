@@ -8,12 +8,17 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <?php echo Asset::css('bootstrap.css'); ?>
+        <?php echo Asset::css('admin/admin.css'); ?>
         <title>ログイン</title>
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <h1>ログイン</h1>
+                <div id="errmsg">
+                    <?php echo \Session::get_flash('errMsg', ''); ?>
+                </div>
+
                 <?php echo Form::open('admin/login/login'); ?>
                 <table class="table">
                     <tr>

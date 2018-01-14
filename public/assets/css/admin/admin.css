@@ -2,14 +2,10 @@
     margin-top: 5%;
 }
 
-table,td {
-    border:solid 1px black;
-}
-
-table {
-    border-collapse:collapse;
-}
-
 #logout {
     color: blue;
+}
+
+#errmsg {
+    color: red;
 }
