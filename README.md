@@ -55,18 +55,31 @@ APPPATH/modules/user
 ## 2017/12/29(金)
 - システム構成図、開発環境に開発ツールを追記
 
-## 2017/01/12(金)
+## 2018/01/12(金)
 - ユーザ一覧画面修正（Presenter利用）
 - Elasticserch導入(アプリログの取り込みは未実現)、Kibanaと連携
 - Redis導入、session管理にredisを利用
 - Supervisord導入、ElasticsearchやRedisの起動設定
 - ログイン画面実装（Authパッケージ->Simpleauth利用）
 
-## 2017/01/13(土)
+## 2018/01/13(土)
 - Wikiを作成->キャプチャを添付
 - システム構成図にKibanaを追記
 
-## 2017/01/14(日)
+## 2018/01/14(日)
 - Session制御の修正
 
 ---
+
+## 2018/02/01(木)
+- Apache → nignx+php-fastcgiの構成に切り替え
+  [完了]構成の切り替え
+  [未完]assets配下のcssの読み込み、DB接続 → nignxのconfigファイルに設定する方法を調査中
+  
+- phpmdやphpcpd、PHP Unitなどを使ったビルド環境構築
+  [完了]コマンドベースでの利用
+  [未完]phpingを用いたビルド環境構築
+  
+- Elasticsearchから抽出したデータのレポート画面実装(グラフ表示やテーブル表示)
+  [完了]phpからElasticsearchへの接続
+  [未完]データの利用（グラフやテーブル表示）
