@@ -16,10 +16,16 @@
         "fuelphp/upload": "2.0.6",
         "monolog/monolog": "1.18.*",
         "phpseclib/phpseclib": "2.0.0",
-        "michelf/php-markdown": "1.4.0"
+        "michelf/php-markdown": "1.4.0",
+        "elasticsearch/elasticsearch": "~5.0"
     },
     "require-dev": {
-        "fuel/docs": "1.8.*"
+        "fuel/docs": "1.8.*",
+        "phing/phing": "*",
+        "phpunit/phpunit": "*",
+        "phpmd/phpmd": "*",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer": "*"
     },
     "suggest": {
         "dwoo/dwoo" : "Allow Dwoo templating with the Parser package",
@@ -30,7 +36,8 @@
         "mthaml/mthaml": "Allow Haml templating with Twig supports with the Parser package"
     },
     "config": {
-        "vendor-dir": "fuel/vendor"
+        "vendor-dir": "fuel/vendor",
+        "bin-dir" : "bin/"
     },
     "extra": {
         "installer-paths": {
