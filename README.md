@@ -66,4 +66,7 @@ APPPATH/modules/user
 - Wikiを作成->キャプチャを添付
 - システム構成図にKibanaを追記
 
+## 2017/01/14(日)
+- Session制御の修正
+
 ---
