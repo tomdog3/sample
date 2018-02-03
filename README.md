@@ -76,15 +76,19 @@ APPPATH/modules/user
 https://github.com/tomdog3/sample/wiki
 
 - Apache → nignx+php-fastcgiの構成に切り替え  
-  [完了]構成の切り替え  
-  [未完]assets配下のcssの読み込み、DB接続 → nignxのconfigファイルに設定する方法を調査中  
+  [完了] 構成の切り替え  
+  [未完] assets配下のcssの読み込み、DB接続 → nignxのconfigファイルに設定する方法を調査中  
 
 - phpmdやphpcpd、PHP Unitなどを使ったビルド環境構築  
-  [完了]コマンドベースでの利用  
-  [未完]phpingを用いたビルド環境構築  
+  [完了] コマンドベースでの利用  
+  [未完] phpingを用いたビルド環境構築  
   
 - Elasticsearchから抽出したデータのレポート画面実装(グラフ表示やテーブル表示)  
-  [完了]phpからElasticsearchへの接続  
-  [未完]データの利用（グラフやテーブル表示）  
+  [完了] phpからElasticsearchへの接続  
+  [未完] データの利用（グラフやテーブル表示）  
 
-
+## 2018/02/03(土)
+- Apache → nginx+php-fastcgiの構成に切り替え  
+  [完了] assets配下のcssの読み込み、DB接続  
+  　　①css読み込み ： nginx.conf、php-fpm.confの設定ファイルを修正  
+   　　②DB接続 ： Apache利用時に参照していたMAMPのMysqlを参照するようphp.iniファイルを修正
