@@ -17,28 +17,20 @@ class Controller_Report extends \Controller {
 
     function action_index() {
 
-        $esclient = \Elasticsearch\ClientBuilder::create()
+        $client = \Elasticsearch\ClientBuilder::create()
                 ->setHosts(["localhost:9200"])
                 ->build();
-//        $params = [
-//            'index' => 'twitter',
-//            'body' => [
-//                'query' => [
-//                    'match' => ['type' => 'user']
-//                ],
-//            ]
-//        ];
-        
+
         $params = [
-            'index' => 'twitter',
-            'type' => 'tweet',
-//            'id' => '1'
+            'index' => 'test_index',
+            'type' => 'test_type',
         ];
-        
-        $response = $esclient->search($params);
-        print_r($response);
-//        $this->args = $response;
-//        return \Response::forge(\View::forge('report', $this));
+
+        $response = $client->search($params);
+//        $doc = $response['hits']['hits'][0]['_source'];
+        $data = array();
+        $data['response'] = $response;
+        return \Response::forge(\View::forge('report', $data));
     }
 
 }
