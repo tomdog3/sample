@@ -24,14 +24,6 @@ class Controller_Report extends \Controller {
                     'order' => 'asc'
                 ]
             ],
-            'aggs' => [
-                'response_name' => [
-                    'terms' => [
-                        'field' => 'response_name',
-                        'size' => 50
-                    ]
-                ],
-            ]
         ]
     ];
 
@@ -76,21 +68,21 @@ class Controller_Report extends \Controller {
                             'order' => 'asc'
                         ]
                     ],
-                    'aggs' => [
-                        'response_name' => [
-                            'terms' => [
-                                'field' => 'response_name',
-                                'size' => 50
-                            ]
-                        ],
-                        'my_upload_time_histogram' => [
-                            'date_histogram' => [
-                                'field' => 'response_time',
-                                'interval' => '1M',
-                                'format' => "yyyy-MM-dd"
-                            ]
-                        ]
-                    ]
+//                    'aggs' => [
+//                        'response_name' => [
+//                            'terms' => [
+//                                'field' => 'response_name',
+//                                'size' => 50
+//                            ]
+//                        ],
+//                        'my_upload_time_histogram' => [
+//                            'date_histogram' => [
+//                                'field' => 'response_time',
+//                                'interval' => '1M',
+//                                'format' => "yyyy-MM-dd"
+//                            ]
+//                        ]
+//                    ]
                 ]
             ];
         }
