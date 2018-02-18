@@ -108,7 +108,7 @@ https://github.com/tomdog3/sample/wiki
   
 【実績】  
 ①：jsライブラリ導入・表示確認、キーワード検索機能追加  
-②：AWSアカウント作成・Amazon Linuxに接続確認  
+②：AWSアカウント作成・Amazon Linuxに接続確認  
 ③：参考URL https://qiita.com/OMOIKANESAN/items/d7a794a42b9baa46fd1f  
 
 キャプチャ追加  
