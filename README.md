@@ -91,4 +91,25 @@ https://github.com/tomdog3/sample/wiki
 - Apache → nginx+php-fastcgiの構成に切り替え  
   [完了] assets配下のcssの読み込み、DB接続  
   　　①css読み込み ： nginx.conf、php-fpm.confの設定ファイルを修正  
-   　　②DB接続 ： Apache利用時に参照していたMAMPのMysqlを参照するようphp.iniファイルを修正
+   　　②DB接続 ： Apache利用時に参照していたMAMPのMysqlを参照するようphp.iniファイルを修正  
+   ※wikiのキャプチャ更新済み
+
+## 2018/02/04(日)
+- Elasticsearchから抽出したデータのレポート画面実装(グラフ表示やテーブル表示)  
+  [完了] データの利用（テーブル表示）  
+  [未完] グラフ表示  
+  ※wikiのキャプチャに「Elasticsearchログ出力画面」を追加
+  
+## 2018/02/18(日)
+【TODO】  
+① Elasticsearchログ集計後の画面表示 → グラフ表示（jsのライブラリ）、キーワード検索機能などの実装  
+② AWSの役割、機能把握 → EC2・SQS・S3・ELB・+α（Auto Scaling）  
+③ メールの仕様把握 → SPF認証・DKIM署名（ドメイン書き換え時）  
+  
+【実績】  
+①：jsライブラリ導入・表示確認、キーワード検索機能追加  
+②：AWSアカウント作成・Amazon Linuxに接続してみた  
+③：参考URL https://qiita.com/OMOIKANESAN/items/d7a794a42b9baa46fd1f  
+
+キャプチャ追加  
+https://github.com/tomdog3/sample/wiki
