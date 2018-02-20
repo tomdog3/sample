@@ -22,12 +22,12 @@ and open the template in the editor.
                 <?php
                 echo Form::open('admin/report/search');
                 $select = array(
-                    'null'=>'条件選択',
-                    'id'=>'ログ番号',
-                    'response_name'=>'対応者',
-                    'question_name'=>'質問者',
-                    'inquiry'=>'問合内容',
-                    'response_time'=>'返答時間',
+                    'null' => '<条件選択>',
+                    'id' => 'ログ番号',
+                    'response_name' => '対応者',
+                    'question_name' => '質問者',
+                    'inquiry' => '問合内容',
+                    'response_time' => '返答日時',
                 );
                 echo Form::select('search_type', null, $select);
                 echo Form::input('search_text', '', array('size' => 20));
@@ -45,41 +45,45 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($response['hits']['hits'] as $row): ?>
-                            <tr>
-                                <td><?php echo $row['_source']['id']; ?></td>
-                                <td><?php echo $row['_source']['response_name']; ?></td>
-                                <td><?php echo $row['_source']['question_name']; ?></td>
-                                <td><?php echo $row['_source']['inquiry']; ?></td>
-                                <td><?php echo $row['_source']['response_time']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
+                        <?php if (isset($response['hits']['hits'])) : ?>
+                            <?php foreach ($response['hits']['hits'] as $row): ?>
+                                <tr>
+                                    <td><?php echo $row['_source']['id']; ?></td>
+                                    <td><?php echo $row['_source']['response_name']; ?></td>
+                                    <td><?php echo $row['_source']['question_name']; ?></td>
+                                    <td><?php echo $row['_source']['inquiry']; ?></td>
+                                    <td><?php echo $row['_source']['response_time']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
-            
+
+            <!-- アクセス日時、日付ごとの件数を取得 -->
+            <?php if (isset($response['aggregations'])) : ?>
+                <?php
+                $arry = array();
+                if (isset($response['aggregations'])) {
+                    for ($i = 0; $i < count($response['aggregations']['by_date']['buckets']); $i++) {
+                        $arry[$i] = array('year' => $response['aggregations']['by_date']['buckets'][$i]['key_as_string'], 'value' => $response['aggregations']['by_date']['buckets'][$i]['doc_count']);
+                    }
+                    $json = json_encode($arry);
+                }
+                ?>
+            <?php endif; ?>
+
             <!-- morris.js動作確認 -->
             <div id="myfirstchart" style="height: 250px;"></div>
             <script>
+
+
                 new Morris.Line({
-                    // ID of the element in which to draw the chart.
                     element: 'myfirstchart',
-                    // Chart data records -- each entry in this array corresponds to a point on
-                    // the chart.
-                    data: [
-                        {year: '2008', value: 20},
-                        {year: '2009', value: 10},
-                        {year: '2010', value: 5},
-                        {year: '2011', value: 5},
-                        {year: '2012', value: 20}
-                    ],
-                    // The name of the data record attribute that contains x-values.
+                    data: <?php if (isset($json)) echo $json; ?>,
                     xkey: 'year',
-                    // A list of names of data record attributes that contain y-values.
                     ykeys: ['value'],
-                    // Labels for the ykeys -- will be displayed when you hover over the
-                    // chart.
-                    labels: ['Value']
+                    labels: ['返答件数']
                 });
             </script>
         </div>

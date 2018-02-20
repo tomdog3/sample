@@ -24,6 +24,16 @@ class Controller_Report extends \Controller {
                     'order' => 'asc'
                 ]
             ],
+            "aggs" => [
+                "by_date" => [
+                    "date_histogram" => [
+                        "field" => "response_time",
+                        "interval" => "day",
+                        "format" => "yyyy-MM-dd",
+                        "time_zone" => "Japan"
+                    ]
+                ]
+            ]
         ]
     ];
 
@@ -41,6 +51,7 @@ class Controller_Report extends \Controller {
         return \Response::forge(\View::forge('report', $data));
     }
 
+    /* 検索ボタン押下時の動作 */
     function action_search() {
         $form = \Input::post();
         $search_type = \Arr::get($form, "search_type", null);
@@ -50,8 +61,13 @@ class Controller_Report extends \Controller {
                 ->setHosts(["localhost:9200"])
                 ->build();
 
-        if ($search_text == null) {
+        $data = array();
+
+        // セレクトボックス未選択 or テキストボックス未入力
+        if ($search_type == null || $search_text == null) {
             $params = $this->defparams;
+            $response = $client->search($params);
+            $data['response'] = $response;
         } else {
             $params = [
                 'index' => 'test_index',
@@ -68,28 +84,22 @@ class Controller_Report extends \Controller {
                             'order' => 'asc'
                         ]
                     ],
-//                    'aggs' => [
-//                        'response_name' => [
-//                            'terms' => [
-//                                'field' => 'response_name',
-//                                'size' => 50
-//                            ]
-//                        ],
-//                        'my_upload_time_histogram' => [
-//                            'date_histogram' => [
-//                                'field' => 'response_time',
-//                                'interval' => '1M',
-//                                'format' => "yyyy-MM-dd"
-//                            ]
-//                        ]
-//                    ]
+                    "aggs" => [
+                        "by_date" => [
+                            "date_histogram" => [
+                                "field" => "response_time",
+                                "interval" => "day",
+                                "format" => "yyyy-MM-dd",
+                                "time_zone" => "Japan"
+                            ]
+                        ]
+                    ]
                 ]
             ];
+            $response = $client->search($params);
+            $data['response'] = $response;
         }
 
-        $response = $client->search($params);
-        $data = array();
-        $data['response'] = $response;
         return \Response::forge(\View::forge('report', $data));
     }
 
