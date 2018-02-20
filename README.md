@@ -107,9 +107,17 @@ https://github.com/tomdog3/sample/wiki
 ③ メールの仕様把握 → SPF認証・DKIM署名（ドメイン書き換え時）  
   
 【実績】  
-①：jsライブラリ導入・表示確認、キーワード検索機能追加  
+①：jsライブラリ導入・サンプル表示確認、キーワード検索機能追加  
 ②：AWSアカウント作成・Amazon Linuxに接続確認  
 ③：参考URL https://qiita.com/OMOIKANESAN/items/d7a794a42b9baa46fd1f  
 
 キャプチャ追加  
 https://github.com/tomdog3/sample/wiki
+
+## 2018/02/20(火)
+【実績】  
+①：日付ごとの表示件数をグラフ化、  
+　　ログ番号の昇順でソートするよう修正  
+  
+キャプチャ更新  
+https://github.com/tomdog3/sample/wiki/Elasticsearch%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B%E7%94%BB%E9%9D%A2
