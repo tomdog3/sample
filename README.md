@@ -113,3 +113,11 @@ https://github.com/tomdog3/sample/wiki
 
 キャプチャ追加  
 https://github.com/tomdog3/sample/wiki
+
+## 2018/02/20(火)
+【実績】  
+①：日付ごとの表示件数をグラフ化、  
+　　ログ番号の昇順でソートするよう修正  
+  
+キャプチャ更新  
+https://github.com/tomdog3/sample/wiki/Elasticsearch%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B%E7%94%BB%E9%9D%A2
