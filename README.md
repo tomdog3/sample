@@ -121,3 +121,9 @@ https://github.com/tomdog3/sample/wiki
   
 キャプチャ更新  
 https://github.com/tomdog3/sample/wiki/Elasticsearch%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B%E7%94%BB%E9%9D%A2
+
+## 2018/02/21(水)
+①：テーブル表示とグラフ表示切り替えタブの追加  
+
+キャプチャ更新  
+https://github.com/tomdog3/sample/wiki/Elasticsearch%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B%E7%94%BB%E9%9D%A2
