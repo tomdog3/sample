@@ -29,7 +29,7 @@ https://github.com/tomdog3/sample/wiki
 - PHP 5.4
 - FuelPHP 1.8
 - MAMP 4.2.1
-- Elasticsearch 6.1.1
+- Elasticsearch 5.6.5
 - Supervisord 3.3.3
 - Redis 4.0.6
 - Kibana 6.1.1
